@@ -1,0 +1,170 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <centre><img src="googleimg.png" alt="GOOGLE" width="300" height="200"></centre>
+    <div class="links">
+        <a href="image_search.html">Image Search</a>
+        <a href="advanced_search.html">Advanced Search</a>
+    </div>
+    <div class="search-container">
+        <form action="https://www.google.com/search" method="get">
+            <input type="text" name="q" class="search-bar" placeholder="Search Google...">
+            <div class="buttons">
+                <button type="submit" class="search-button">Google Search</button>
+                <button type="submit" class="search-button" name="btnI">I'm Feeling Lucky</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+<!--magesearch.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Image Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <centre><img src="googleimg.png" alt="GOOGLE" width="300" height="200"></centre>
+    <div class="links">
+        <a href="index.html">Google Search</a>
+    </div>
+    <div class="search-container">
+        <form action="https://www.google.com/search" method="get">
+            <input type="hidden" name="tbm" value="isch">
+            <input type="text" name="q" class="search-bar" placeholder="Search Google Images...">
+            <div class="buttons">
+                <button type="submit" class="search-button">Search Images</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+<!--advanced.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Advanced Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="links">
+        <a href="index.html">Google Search</a>
+    </div>
+    <div class="search-container">
+        <form action="https://www.google.com/search" method="get">
+            <div>
+                <label for="all">Find pages with all these words:</label>
+                <input type="text" name="as_q" id="all" class="search-bar">
+            </div>
+            <div>
+                <label for="exact">Find pages with this exact word or phrase:</label>
+                <input type="text" name="as_epq" id="exact" class="search-bar">
+            </div>
+            <div>
+                <label for="any">Find pages with any of these words:</label>
+                <input type="text" name="as_oq" id="any" class="search-bar">
+            </div>
+            <div>
+                <label for="none">Find pages with none of these words:</label>
+                <input type="text" name="as_eq" id="none" class="search-bar">
+            </div>
+            <div class="buttons">
+                <button type="submit" class="advanced-search-button">Advanced Search</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+<!--styles.css-->
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.links a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #1a73e8;
+    font-size: 14px;
+}
+
+.search-container {
+    text-align: center;
+}
+
+.search-bar {
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #dfe1e5;
+    outline: none;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.search-button, .advanced-search-button {
+    background-color: #4285f4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.search-button:hover, .advanced-search-button:hover {
+    background-color: #357ae8;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#all, #exact, #any, #none {
+    width: 400px;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #dfe1e5;
+    outline: none;
+}
