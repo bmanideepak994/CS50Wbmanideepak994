@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>{% block title %}Encyclopedia{% endblock %}</title>
+    </head>
+    <body>
+        <div id="sidebar">
+            <h2>Encyclopedia</h2>
+            <form action="{% url 'search' %}" method="get">
+                <input type="text" name="q" placeholder="Search Encyclopedia">
+                <button type="submit">Search</button>
+            </form>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'new_page' %}">Create New Page</a>
+            <a href="{% url 'random_page' %}">Random Page</a>
+        </div>
+        <div id="main">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
